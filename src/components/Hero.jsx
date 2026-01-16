@@ -92,7 +92,7 @@ export default function Hero() {
           <div className="mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start">
 
             <a
-              href="/Gowrav-Resume.pdf"
+              href="/P M Gowrav Ganapathy - Resume.pdf"
               download
               className="bg-maroon px-8 py-3 rounded-full text-white
                          hover:scale-105 hover:shadow-[0_0_25px_rgba(128,0,0,0.6)]

@@ -61,7 +61,7 @@ export default function Navbar() {
         {/* Buttons */}
         <div className="hidden md:flex gap-4">
           <a
-            href="/Gowrav-Resume.pdf"
+            href="/P M Gowrav Ganapathy - Resume.pdf"
             download
             className="border border-gold text-gold px-5 py-2 rounded-full hover:bg-gold hover:text-black transition text-sm"
           >

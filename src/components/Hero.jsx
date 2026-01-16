@@ -38,99 +38,122 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-black text-white flex items-center px-24 overflow-hidden"
+      className="
+        relative min-h-screen bg-black text-white overflow-hidden
+        flex items-center
+        pt-28 md:pt-0
+        px-6 sm:px-10 md:px-16 lg:px-24
+      "
     >
 
       {/* Background glow */}
       <motion.div
         animate={{ y: [0, 30, 0] }}
         transition={{ duration: 10, repeat: Infinity }}
-        className="absolute w-[600px] h-[600px] bg-maroon/20 blur-[200px] top-[-100px] left-[-100px] rounded-full"
+        className="absolute w-[500px] h-[500px] md:w-[600px] md:h-[600px]
+                   bg-maroon/20 blur-[200px] top-[-150px] left-[-150px] rounded-full"
       />
       <motion.div
         animate={{ y: [0, -30, 0] }}
         transition={{ duration: 12, repeat: Infinity }}
-        className="absolute w-[500px] h-[500px] bg-gold/10 blur-[200px] bottom-[-100px] right-[-100px] rounded-full"
+        className="absolute w-[400px] h-[400px] md:w-[500px] md:h-[500px]
+                   bg-gold/10 blur-[200px] bottom-[-150px] right-[-150px] rounded-full"
       />
 
-      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-24 items-center w-full">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 w-full items-center">
 
         {/* LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
+          className="text-center md:text-left"
         >
-          <p className="tracking-widest text-gold text-sm mb-4">
+          <p className="tracking-widest text-gold text-xs sm:text-sm mb-4">
             {roles[roleIndex].slice(0, charIndex)}
             <span className="animate-pulse">|</span>
           </p>
 
-          <h1 className="text-6xl leading-tight font-light mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-6">
             PM{" "}
-            <span className="bg-gradient-to-r from-maroon via-gold to-maroon bg-clip-text text-transparent font-semibold ">
+            <span className="bg-gradient-to-r from-maroon via-gold to-maroon bg-clip-text text-transparent font-semibold">
               Gowrav
             </span>
             <br />
             Ganapathy
           </h1>
 
-          <p className="text-gray text-lg max-w-xl leading-relaxed">
+          <p className="text-gray text-base sm:text-lg max-w-xl mx-auto md:mx-0 leading-relaxed">
             Designing meaningful, interactive and user-centered digital experiences
             that connect emotion with usability.
           </p>
 
-          <div className="mt-12 flex gap-6 flex-wrap">
+          {/* Buttons */}
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start">
 
             <a
               href="/Gowrav-Resume.pdf"
               download
-              className="bg-maroon px-8 py-3 rounded-full text-white hover:scale-105 hover:shadow-[0_0_25px_rgba(128,0,0,0.6)] transition"
+              className="bg-maroon px-8 py-3 rounded-full text-white
+                         hover:scale-105 hover:shadow-[0_0_25px_rgba(128,0,0,0.6)]
+                         transition"
             >
               Download Resume
             </a>
 
             <a
               href="#contact"
-              className="border border-gold text-gold px-8 py-3 rounded-full hover:bg-gold hover:text-black hover:scale-105 hover:shadow-[0_0_25px_rgba(212,175,154,0.6)] transition"
+              className="border border-gold text-gold px-8 py-3 rounded-full
+                         hover:bg-gold hover:text-black hover:scale-105
+                         hover:shadow-[0_0_25px_rgba(212,175,154,0.6)]
+                         transition"
             >
               Contact Me
             </a>
 
             <a
               href="/Extracurricular"
-              className="border border-maroon text-maroon px-6 py-3 rounded-full hover:bg-maroon hover:text-white transition flex items-center gap-2"
+              className="border border-maroon text-maroon px-6 py-3 rounded-full
+                         hover:bg-maroon hover:text-white transition
+                         flex items-center justify-center gap-2"
             >
               ✨ Beyond Code
             </a>
 
           </div>
 
-          {/* Scroll indicator */}
-          <div className="mt-14 text-gold text-sm animate-bounce">
+          {/* Scroll indicator — NOW VISIBLE ON MOBILE */}
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            className="mt-12 text-gold text-sm"
+          >
             ↓ Scroll
-          </div>
+          </motion.div>
         </motion.div>
 
-        {/* RIGHT IMAGE (STATIC NOW) */}
+        {/* RIGHT IMAGE */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          className="relative flex justify-center"
+          className="relative flex justify-center mt-10 md:mt-0"
         >
-          {/* Glow ring */}
-          <div className="absolute w-[380px] h-[380px] border border-maroon/40 rounded-full blur-sm"></div>
+          <div className="absolute w-[260px] h-[260px] sm:w-[320px] sm:h-[320px]
+                          lg:w-[380px] lg:h-[380px]
+                          border border-maroon/40 rounded-full blur-sm" />
 
           <img
             src="/profile.png"
             alt="PM Gowrav"
-            className="w-[360px] relative z-10 drop-shadow-[0_30px_60px_rgba(0,0,0,0.8)] hover:scale-105 transition"
+            className="w-[240px] sm:w-[300px] lg:w-[360px]
+                       relative z-10
+                       drop-shadow-[0_30px_60px_rgba(0,0,0,0.8)]
+                       hover:scale-105 transition"
           />
         </motion.div>
 
       </div>
-      
     </section>
   );
 }

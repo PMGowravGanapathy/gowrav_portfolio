@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Loader from "./components/Loader";
 import Skills from "./components/Skills";
 import Extracurricular from "./pages/Extracurricular";
+import Experience from "./components/Experience";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -34,6 +35,7 @@ export default function App() {
               <About />
               <Skills />
               <Projects />
+              <Experience/>
               <Contact />
               <Footer />
             </>

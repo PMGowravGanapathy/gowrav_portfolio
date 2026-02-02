@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const sections = ["home", "about", "work", "contact"];
+const sections = ["home", "about", "skills", "experience", "work", "contact"];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-black/70 backdrop-blur border-b border-white/5">
 
-      <div className="flex items-center justify-between px-24 py-4">
+      <div className="flex items-center justify-between px-6 sm:px-10 md:px-16 lg:px-24 py-4">
 
         {/* Logo */}
         <a href="#home" className="text-white font-semibold tracking-wide text-lg">
@@ -37,7 +37,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-10 text-sm">
+        <ul className="hidden md:flex gap-8 text-sm">
           {sections.map(item => (
             <li key={item}>
               <a
@@ -67,9 +67,12 @@ export default function Navbar() {
           >
             Resume
           </a>
+
           <a
             href="#contact"
-            className="bg-maroon px-5 py-2 rounded-full text-white hover:shadow-[0_0_25px_rgba(128,0,0,0.6)] transition text-sm"
+            className="bg-maroon px-5 py-2 rounded-full text-white
+                       hover:shadow-[0_0_25px_rgba(128,0,0,0.6)]
+                       transition text-sm"
           >
             Hire Me
           </a>
@@ -101,7 +104,7 @@ export default function Navbar() {
           ))}
 
           <a
-            href="/Gowrav-Resume.pdf"
+            href="/P M Gowrav Ganapathy - Resume.pdf"
             download
             className="block border border-gold text-gold text-center py-2 rounded-full"
           >
@@ -116,7 +119,6 @@ export default function Navbar() {
           </a>
         </div>
       )}
-
     </nav>
   );
 }

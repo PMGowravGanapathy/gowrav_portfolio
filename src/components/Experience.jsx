@@ -13,6 +13,18 @@ const experiences = [
     tech: ["Figma", "React", "Next.js", "JavaScript", "MongoDB"]
   },
   {
+    role: "Web Development Intern",
+    company: "GlowLogic Solutions",
+    duration: "February 2026 – Present",
+    description: [
+      "Developing responsive and user-friendly web applications using modern technologies.",
+      "Working with React and Next.js to build dynamic and scalable front-end interfaces.",
+      "Collaborating with the team to implement UI/UX designs into functional web pages.",
+      "Gaining hands-on experience with APIs, databases, and full-stack development workflows."
+    ],
+    tech: ["Web Development", "React", "Next.js", "JavaScript", "MongoDB"]
+  },
+  {
     role: "Creative Team Volunteer",
     company: "TEDx SJEC",
     duration: "2024",

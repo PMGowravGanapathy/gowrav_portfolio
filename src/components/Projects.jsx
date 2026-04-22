@@ -40,6 +40,19 @@ export default function Projects() {
       image: "/expense tracker.png",
       link: "https://github.com/PMGowravGanapathy/expense-tracker",
     },
+    {
+      title: "Study Resource Sharing Platform",
+      category: "Development",
+      image: "/study resource.png",
+      link: "https://github.com/PMGowravGanapathy/Study-Resource-Sharing",
+    },
+    {
+      title: "Campus Lost and Found App",
+      category: "Development",
+      image: "/campus lost and found.png",
+      link: "https://github.com/PMGowravGanapathy/campus-lost-and-found",
+    },
+
   ];
 
   const [filter, setFilter] = useState("All");
